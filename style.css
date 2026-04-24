@@ -1,46 +1,33 @@
-#zPlaneDiv
-{
-	width: 50%;
-	height: 50%;
-	float: left;
+#wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 50px;
+    width: 100%;
 }
 
-#zCanvas
-{
-	border: 1px solid #000000;
+#zPlaneDiv, #wPlaneDiv {
+    flex: 0 0 auto; /* Keep planes from shrinking */
 }
 
-#wPlaneDiv
-{
-	width: 50%;
-	height: 50%;
-	float: right;
+#zCanvas, #wCanvas {
+    border: 1px solid #000000;
 }
 
-#wCanvas
-{
-	border: 1px solid #000000;
+#settingsContainer {
+    flex: 0 0 200px; /* Give the middle column a fixed width */
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 60px; /* Align roughly with the top of the canvases */
 }
 
-.settings
-{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+#center-me {
+    display: block;       /* Required if the element is naturally inline, like a span or img */
+    margin-inline: auto;  /* Modern shorthand for margin-left: auto and margin-right: auto */
+    width: fit-content;   /* Or a specific value like 50%. The width must be less than the container's width. */
 }
-
-.settings-content 
-{
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-	width: 200px;
-}
+/* You can remove the old .settings and .settings-content classes */
